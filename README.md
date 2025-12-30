@@ -1,38 +1,13 @@
-# Student Management Frontend – tp_projet
+# Student Management Frontend
 
-This project is a web frontend developed to consume a RESTful backend created in previous TPs using Java (JAX-RS) and JPA (Hibernate).
+## Project Description
 
-The frontend follows a **Client / Server architecture** and communicates with the backend exclusively through HTTP requests.  
-The frontend does not access the database directly.
+This project is a **web frontend application** developed as part of the **Service-Oriented Architecture** course.
 
----
+The objective of the project is to design a frontend interface that **consumes a RESTful backend** developed in Java using JAX-RS and JPA during practical lab work.  
+The application allows users to manage students through a simple and intuitive interface, following a **Client / Server architecture**.
 
-## Project Context
-
-In previous TPs, a RESTful backend was developed using:
-- JAX-RS (Jersey)
-- JPA (Hibernate)
-- Apache Tomcat
-- MySQL
-
-The objective of this project is to design a frontend interface that consumes these REST services and allows managing students.
-
----
-
-## Features
-
-- **List students**  
-  Displays all students retrieved from the backend in a table view
-
-- **Add a student**
-
-- **Search a student by ID**
-
-- **Update a student**
-
-- **Delete a student**
-
-- **Backend status check (Ping)**
+The frontend communicates with the backend **exclusively via REST services** using HTTP requests and JSON format, without any direct access to the database.
 
 ---
 
@@ -44,34 +19,34 @@ The objective of this project is to design a frontend interface that consumes th
 - JavaScript
 - Fetch API
 
-### Backend (developed in previous TPs)
+### Backend (developed in previous practical lab work)
 - Java
 - JAX-RS (Jersey)
 - JPA (Hibernate)
-- Apache Tomcat
 - MySQL
+- Apache Tomcat
 
 ---
 
-## REST Services Used
+## Instructions to Run the Project
 
-The frontend consumes the following REST endpoints:
-
-- `GET    /persons`
-- `GET    /persons/{id}`
-- `POST   /persons`
-- `PUT    /persons/{id}`
-- `DELETE /persons/{id}`
-- `GET    /ping`
-
-Base URL:
+1. Start the backend REST application on **Apache Tomcat**.
+2. Make sure the backend is accessible at the following base URL:
 http://localhost:8081/tp_projet
-3. Open `index.html` in a web browser
-4. Use the interface to manage students
+3. Open the frontend:
+- Open the `index.html` file in a web browser  
+**or**
+- Deploy the frontend inside the backend `WebContent` directory and access it via Tomcat.
+4. Use the interface to:
+- Display the list of students
+- Add a student
+- Search for a student by ID
+- Update student information
+- Delete a student
 
+---
 
+## Demo Video
 
-## GitHub Repository
-
-Frontend source code:  
-👉 https://github.com/imenbahri444/tp_projet-frontend
+Link to the demonstration video:  
+👉 https://drive.google.com/file/d/1tlzd2qRJJiKPai3c4gXleByQjuLb6O9s/view?usp=sharing
