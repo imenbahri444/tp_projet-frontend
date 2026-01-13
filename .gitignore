@@ -1,0 +1,17 @@
+# Eclipse workspace garbage
+.metadata/
+.settings/
+.classpath
+.project
+
+# Build output
+target/
+bin/
+build/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

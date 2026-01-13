@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Student Management</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Student Management System</h1>
+
+      <!-- Ping -->
+      <h2>Backend Status</h2>
+      <div class="row">
+        <button id="btnPing" type="button">Ping</button>
+        <span id="pingOut"></span>
+      </div>
+
+      <!-- Add -->
+      <h2>Add Student</h2>
+      <form id="addForm">
+        <input id="cin" placeholder="CIN" required />
+        <input id="nom" placeholder="Nom" required />
+        <input id="email" placeholder="Email" type="email" required />
+        <button type="submit">Add</button>
+        <span id="addOut"></span>
+      </form>
+
+      <!-- Search -->
+      <h2>Search Student by ID (Database ID)</h2>
+      <form id="searchForm">
+        <input id="sid" placeholder="student_id (1,2,3...)" type="number" min="1" required />
+        <button type="submit">Get</button>
+        <span id="searchOut"></span>
+      </form>
+
+      <!-- Show search result nicely (optional but useful) -->
+      <pre id="searchResult"></pre>
+
+      <!-- Update -->
+      <h2>Update Student (by ID)</h2>
+      <form id="updateForm">
+        <input id="uid" placeholder="student_id" type="number" min="1" required />
+        <input id="ucin" placeholder="CIN" required />
+        <input id="unom" placeholder="Nom" required />
+        <input id="uemail" placeholder="Email" type="email" required />
+        <button type="submit">Update</button>
+        <span id="updateOut"></span>
+      </form>
+
+      <!-- Delete -->
+      <h2>Delete Student (by ID)</h2>
+      <div class="row">
+        <input id="did" placeholder="student_id" type="number" min="1" />
+        <button id="deleteBtn" type="button">Delete</button>
+        <span id="deleteOut"></span>
+      </div>
+
+      <!-- List -->
+      <h2>Liste des étudiants</h2>
+      <p class="hint">Données récupérées depuis le backend via GET /persons</p>
+
+      <button id="btnLoad" type="button">Load</button>
+
+      <table id="studentsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>CIN</th>
+            <th>Nom</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filled dynamically by JS -->
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
